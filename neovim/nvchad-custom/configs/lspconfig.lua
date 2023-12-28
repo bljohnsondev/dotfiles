@@ -19,3 +19,5 @@ lspconfig.rust_analyzer.setup({
   filetypes = {"rust"},
   root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 })
+
+lspconfig.custom_elements_ls.setup{}

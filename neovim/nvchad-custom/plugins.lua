@@ -120,7 +120,15 @@ local plugins = {
 
 	{
 		"nvim-tree/nvim-tree.lua",
+		lazy = false,
 		opts = overrides.nvimtree,
+		config = function()
+			require("nvim-tree").setup({
+				view = {
+          adaptive_size = true,
+				},
+			})
+		end,
 	},
 
 	-- Install a plugin
@@ -130,6 +138,16 @@ local plugins = {
 		config = function()
 			require("better_escape").setup()
 		end,
+	},
+	{
+		"folke/trouble.nvim",
+		lazy = false,
+		-- opts will be merged with the parent spec
+		opts = { use_diagnostic_signs = true },
+	},
+	{
+		"folke/zen-mode.nvim",
+		lazy = false,
 	},
 
 	-- To make a plugin not be loaded
