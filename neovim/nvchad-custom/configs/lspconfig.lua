@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = { "html", "cssls", "tsserver", "intelephense" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -20,4 +20,8 @@ lspconfig.rust_analyzer.setup({
   root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 })
 
-lspconfig.custom_elements_ls.setup{}
+lspconfig.custom_elements_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"javascript", "typescript"}
+})

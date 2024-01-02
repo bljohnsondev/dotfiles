@@ -38,97 +38,18 @@ local plugins = {
 	-- override plugin configs
 	{
 		"williamboman/mason.nvim",
-		--opts = overrides.mason
-		opts = {
-			ensure_installed = {
-				"arduino-language-server",
-				"astro-language-server",
-				"bash-language-server",
-				"css-lsp",
-				"cssmodules-language-server",
-				"custom-elements-languageserver",
-				"docker-compose-language-service",
-				"dockerfile-language-server",
-				"eslint-lsp",
-				"html-lsp",
-				"jq",
-				"json-lsp",
-				"lua-language-server",
-				"markdownlint",
-				"nginx-language-server",
-				"prettier",
-				"pylint",
-				"python-lsp-server",
-				"rust-analyzer",
-				"shfmt",
-				"sql-formatter",
-				"sqlfmt",
-				"standardjs",
-				"stylelint",
-				"stylelint-lsp",
-				"stylua",
-				"svelte-language-server",
-				"tailwindcss-language-server",
-				"ts-standard",
-				"typescript-language-server",
-				"vim-language-server",
-				"vue-language-server",
-				"xmlformatter",
-				"yaml-language-server",
-				"yamlfmt",
-			},
-		},
+		opts = overrides.mason
 	},
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		--opts = overrides.treesitter,
-		opts = {
-			ensure_installed = {
-				"astro",
-				"bash",
-				"css",
-				"dockerfile",
-				"gitignore",
-				"go",
-				"html",
-				"javascript",
-				"jq",
-				"jsdoc",
-				"json",
-				"lua",
-				"markdown",
-				"markdown_inline",
-				"nix",
-				"php",
-				"prisma",
-				"python",
-				"regex",
-				"rust",
-				"scss",
-				"sql",
-				"svelte",
-				"tsx",
-				"twig",
-				"typescript",
-				"vim",
-				"vue",
-				"yaml",
-			},
-		},
+		opts = overrides.treesitter,
 	},
 
 	{
 		"nvim-tree/nvim-tree.lua",
 		lazy = false,
 		opts = overrides.nvimtree,
-		config = function()
-			require("nvim-tree").setup({
-				view = {
-          adaptive_size = true,
-				},
-			})
-		end,
 	},
 
 	-- Install a plugin
@@ -148,6 +69,7 @@ local plugins = {
 	{
 		"folke/zen-mode.nvim",
 		lazy = false,
+		opts = overrides.zenmode,
 	},
 
 	-- To make a plugin not be loaded

@@ -2,16 +2,35 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "vim",
-    "lua",
-    "html",
+    "astro",
+    "bash",
     "css",
+    "dockerfile",
+    "gitignore",
+    "go",
+    "html",
     "javascript",
-    "typescript",
-    "tsx",
-    "c",
+    "jq",
+    "jsdoc",
+    "json",
+    "lua",
     "markdown",
     "markdown_inline",
+    "nix",
+    "php",
+    "prisma",
+    "python",
+    "regex",
+    "rust",
+    "scss",
+    "sql",
+    "svelte",
+    "tsx",
+    "twig",
+    "typescript",
+    "vim",
+    "vue",
+    "yaml",
   },
   indent = {
     enable = true,
@@ -23,20 +42,41 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
-
-    -- web dev stuff
+    "arduino-language-server",
+    "astro-language-server",
+    "bash-language-server",
     "css-lsp",
+    "cssmodules-language-server",
+    "custom-elements-languageserver",
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "eslint-lsp",
     "html-lsp",
-    "typescript-language-server",
-    "deno",
+    "jq",
+    "json-lsp",
+    "lua-language-server",
+    "markdownlint",
+    "nginx-language-server",
     "prettier",
-
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
+    "pylint",
+    "python-lsp-server",
+    "rust-analyzer",
+    "shfmt",
+    "sql-formatter",
+    "sqlfmt",
+    "standardjs",
+    "stylelint",
+    "stylelint-lsp",
+    "stylua",
+    "svelte-language-server",
+    "tailwindcss-language-server",
+    "ts-standard",
+    "typescript-language-server",
+    "vim-language-server",
+    "vue-language-server",
+    "xmlformatter",
+    "yaml-language-server",
+    "yamlfmt",
   },
 }
 
@@ -53,6 +93,16 @@ M.nvimtree = {
         git = true,
       },
     },
+  },
+
+  view = {
+    adaptive_size = true,
+  }
+}
+
+M.zenmode = {
+  window = {
+    width = 160,
   },
 }
 
