@@ -17,7 +17,8 @@ M.general = {
     ["<leader>gl"] = { "<cmd>LazyGit<cr>", "Toggle LazyGit" },
     -- zen mode
     ["<leader>zm"] = { "<cmd>ZenMode<cr>", "Zen Mode" },
-  },
+    -- restart lsp
+    ["<leader>lr"] = { "<cmd>LspRestart<cr>", "LSP Restart" },  },
   v = {
     [">"] = { ">gv", "indent"},
   },
