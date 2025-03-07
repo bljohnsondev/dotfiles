@@ -4,10 +4,10 @@
         relink: true
 
 - clean:
-  ~/:
-    recursive: false
-  ~/.config:
-    recursive: true
+    ~/:
+      recursive: false
+    ~/.config:
+      recursive: true
 
 - link:
     ~/.zshrc: zshrc
