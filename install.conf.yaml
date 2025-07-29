@@ -21,5 +21,7 @@
     ~/.config/zsh:
         create: true
         path: zsh
+    ~/.config/Code/User/settings.json: vscode/settings.json
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
 
 - shell: []

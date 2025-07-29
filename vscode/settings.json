@@ -1,0 +1,46 @@
+{
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
+    "workbench.colorTheme": "Tokyo Night",
+    "editor.tabSize": 2,
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "l", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "f", "w"],
+            "commands": ["workbench.action.findInFiles"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+    "workbench.startupEditor": "none"
+}
