@@ -1,20 +1,10 @@
 {
     "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
     "editor.fontFamily": "'FiraCode Nerd Font', 'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
     "workbench.colorTheme": "Tokyo Night",
+    "workbench.editor.enablePreview": false,
     "editor.tabSize": 2,
-    "[typescript]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": false,
@@ -37,10 +27,24 @@
         {
             "before": ["<leader>", "f", "w"],
             "commands": ["workbench.action.findInFiles"]
-        }
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
     ],
     "vim.handleKeys": {
         "<C-p>": false
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.prettierPath": "./node_modules/prettier",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

@@ -1,39 +1,52 @@
 [
-    {
-        "key": "a",
-        "command": "explorer.newFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.view.explorer",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
+  },
+  {
+    "key": "escape",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.view.explorer",
+        "workbench.action.focusActiveEditorGroup"
+      ]
     },
-    {
-        "key": "tab",
-        "command": "workbench.action.nextEditor",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
-        "key": "shift+tab",
-        "command": "workbench.action.previousEditor",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.view.explorer",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-    },
-    {
-        "key": "escape",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                "workbench.action.toggleSidebarVisibility",
-                "workbench.view.explorer",
-                "workbench.action.focusActiveEditorGroup"
-            ]
-        },
-        "when": "searchInputBoxFocus"
-    }
+    "when": "searchInputBoxFocus"
+  },
+  // these are mac specific
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // to fix repeating key issues with the mac run this from the terminal to disable press-and-hold:
+  // $ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ]
