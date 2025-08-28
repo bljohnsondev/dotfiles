@@ -32,6 +32,10 @@
             "before": ["<leader>", "t"],
             "commands": ["workbench.action.terminal.toggleTerminal"]
         },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        }
     ],
     "vim.handleKeys": {
         "<C-p>": false
