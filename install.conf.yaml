@@ -12,6 +12,7 @@
 - link:
     ~/.zshrc: zshrc
     ~/.config/tmux/tmux.conf: tmux.conf
+    ~/.config/ghostty/config: ghostty.conf
     ~/.config/alacritty:
         create: true
         path: alacritty
