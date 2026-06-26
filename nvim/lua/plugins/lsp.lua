@@ -1,5 +1,13 @@
 return {
   {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        dart = { "dart_format" },
+      },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = {
