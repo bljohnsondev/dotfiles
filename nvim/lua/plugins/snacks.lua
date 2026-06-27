@@ -4,5 +4,8 @@ return {
     terminal = {
       win = { position = "float" },
     },
+    explorer = {
+      trash = false,
+    },
   },
 }
