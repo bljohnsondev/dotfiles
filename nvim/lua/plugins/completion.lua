@@ -6,6 +6,9 @@ return {
         preset = "default",
         ["<Tab>"] = { "select_next", "fallback" },
         ["<S-Tab>"] = { "select_prev", "fallback" },
+        -- Only accepts if an item was explicitly selected via Tab/S-Tab (preselect = false
+        -- below means nothing is selected by default)
+        ["<CR>"] = { "accept", "fallback" },
       },
       completion = {
         list = {
