@@ -9,3 +9,5 @@ vim.keymap.set("n", "<leader>pl", function()
     { win = { position = "float" } }
   )
 end, { desc = "Lint (pnpm)" })
+
+vim.keymap.set("v", "<leader>xS", ":!sort -V<CR>", { silent = true, desc = "Sort lines numerically (Version sort)" })
